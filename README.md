@@ -59,7 +59,14 @@ mvn clean install -Dmaven.test.skip=true
     <artifactId>spring-data-redis-bloom-filter</artifactId>
 </dependency>
 ```
-
+记得版本要在2.1.2以上:
+```xml
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.2.RELEASE</version>
+    </parent>
+```
 
 
 注意：必须使用`jedis`连接池，暂不支持`lettuce`连接池，在自动配置中做了相应的条件限制
